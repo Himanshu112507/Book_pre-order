@@ -328,7 +328,77 @@
     .my-orders-wa-btn:hover {
       background-color: #047857;
     }
+    /* ================= STALL ATTRACTIONS BANNER ================= */
+    .stall-attractions {
+      max-width: 1280px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
 
+    .attractions-card {
+      background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-light) 100%);
+      border: 2px solid var(--ochre-gold);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+    }
+
+    .attractions-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .attractions-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      color: var(--ochre-gold);
+      font-weight: 700;
+    }
+
+    .attractions-header p {
+      font-size: 0.92rem;
+      color: #E2ECE7;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .attractions-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .perk-pill {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(223, 154, 99, 0.45);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .attractions-card {
+        padding: 16px;
+      }
+      .perk-pill {
+        font-size: 0.78rem;
+        padding: 6px 12px;
+      }
+    }
     /* ================= MAIN CATALOG SECTION ================= */
     .catalog-section {
       max-width: 1280px;
@@ -1132,7 +1202,23 @@
       </a>
     </div>
   </div>
+  <!-- ================= STALL ATTRACTIONS & PERKS BANNER ================= -->
+  <section class="stall-attractions">
+    <div class="attractions-card">
+      <div class="attractions-header">
+        <h3>✨ More Than Just Books — Visit Our Stall Experience!</h3>
+        <p>
+          Visit our book stall in front of the <strong>New EC Block (16 &amp; 17 Oct)</strong> for exciting bookmarks, posters, amazing activities with exciting prizes, and in-hand hard copy photographs!
+        </p>
+      </div>
 
+      <div class="attractions-pills">
+        <span class="perk-pill">🔖 Exciting Bookmarks &amp; Posters</span>
+        <span class="perk-pill">🎯 Amazing Activities &amp; Prizes</span>
+        <span class="perk-pill">📸 In-Hand Hard Copy Photographs</span>
+      </div>
+    </div>
+  </section>
   <!-- ================= MAIN BOOK CATALOG ================= -->
   <main class="catalog-section">
     <div class="section-header">
@@ -1206,7 +1292,10 @@
           <div class="polite-hold-box">
             ⏳ Kindly note: We will hold this copy for <strong>3 hours</strong> once the payment QR is shared on WhatsApp.
           </div>
-
+          <div style="background-color: #ECFDF5; border: 1.5px dashed #059669; padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; font-size: 0.82rem; color: #065F46; line-height: 1.5; text-align: left;">
+            🎉 <strong>Don't Miss Out When You Visit Us!</strong><br>
+            Visit our book stall for <strong>exciting bookmarks, posters, amazing activities with exciting prizes, and in-hand hard copy photographs!</strong>
+          </div>
           <a href="#" id="instantWaBtn" target="_blank" rel="noopener" class="wa-instant-btn">
             💬 Ping Coordinator on WhatsApp for Instant QR
           </a>
