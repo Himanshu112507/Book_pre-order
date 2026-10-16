@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Literary Club, SLIET | techFEST'26 Book Stall Pre-Order</title>
-  <!-- Google Fonts for Literary & Crisp UI Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Literary Club Logo Palette */
       --forest-green: #163828;
       --forest-dark: #0f271c;
       --forest-light: #204f39;
@@ -52,7 +50,7 @@
       flex-direction: column;
     }
 
-    /* ================= NAVBAR ================= */
+    /* NAVBAR */
     .navbar {
       background-color: var(--card-bg);
       border-bottom: 2px solid var(--border-warm);
@@ -128,7 +126,7 @@
       color: var(--forest-dark);
     }
 
-    /* ================= HERO BANNER ================= */
+    /* HERO BANNER */
     .hero {
       background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-dark) 100%);
       color: #FFFFFF;
@@ -209,7 +207,7 @@
       font-weight: 700;
     }
 
-    /* ================= HOW IT WORKS STRIP ================= */
+    /* 3-STEP STRIP */
     .steps-strip {
       background-color: var(--ochre-soft);
       border-bottom: 1px solid var(--border-warm);
@@ -275,7 +273,64 @@
       font-weight: 500;
     }
 
-    /* ================= MY PRE-ORDERS BANNER (LOCALSTORAGE) ================= */
+    /* STALL ATTRACTIONS BANNER */
+    .stall-attractions {
+      max-width: 1280px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .attractions-card {
+      background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-light) 100%);
+      border: 2px solid var(--ochre-gold);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+    }
+
+    .attractions-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      color: var(--ochre-gold);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .attractions-header p {
+      font-size: 0.92rem;
+      color: #E2ECE7;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .attractions-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .perk-pill {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(223, 154, 99, 0.45);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* MY PRE-ORDERS BANNER */
     .my-orders-banner {
       max-width: 1280px;
       margin: 20px auto 0;
@@ -328,78 +383,8 @@
     .my-orders-wa-btn:hover {
       background-color: #047857;
     }
-    /* ================= STALL ATTRACTIONS BANNER ================= */
-    .stall-attractions {
-      max-width: 1280px;
-      margin: 24px auto 0;
-      padding: 0 20px;
-    }
 
-    .attractions-card {
-      background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-light) 100%);
-      border: 2px solid var(--ochre-gold);
-      border-radius: var(--radius-lg);
-      padding: 20px 24px;
-      color: #FFFFFF;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 14px;
-    }
-
-    .attractions-header {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .attractions-header h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-      color: var(--ochre-gold);
-      font-weight: 700;
-    }
-
-    .attractions-header p {
-      font-size: 0.92rem;
-      color: #E2ECE7;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    .attractions-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-    }
-
-    .perk-pill {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(223, 154, 99, 0.45);
-      padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .attractions-card {
-        padding: 16px;
-      }
-      .perk-pill {
-        font-size: 0.78rem;
-        padding: 6px 12px;
-      }
-    }
-    /* ================= MAIN CATALOG SECTION ================= */
+    /* CATALOG SECTION */
     .catalog-section {
       max-width: 1280px;
       width: 100%;
@@ -441,14 +426,13 @@
       display: inline-block;
     }
 
-    /* ================= BOOK GRID ================= */
+    /* BOOK GRID */
     .book-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
       gap: 24px;
     }
 
-    /* Individual Book Card */
     .book-card {
       background-color: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -471,11 +455,6 @@
       background-color: #F9FAFB;
     }
 
-    .book-card.is-sold-out:hover {
-      transform: none;
-    }
-
-    /* Cover Frame */
     .cover-wrapper {
       position: relative;
       height: 250px;
@@ -496,19 +475,9 @@
       object-fit: contain;
       border-radius: 4px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-      transition: transform 0.3s ease;
       background-color: var(--forest-green);
     }
 
-    .book-card:hover .book-cover {
-      transform: scale(1.04);
-    }
-
-    .book-card.is-sold-out .book-cover {
-      filter: grayscale(65%);
-    }
-
-    /* Stock Badge (Top Right) */
     .stock-badge {
       position: absolute;
       top: 10px;
@@ -538,7 +507,6 @@
       color: #FFFFFF;
     }
 
-    /* Info / Blurb Toggle Button (Top Left) */
     .info-toggle-btn {
       position: absolute;
       top: 10px;
@@ -552,19 +520,9 @@
       font-weight: 600;
       cursor: pointer;
       z-index: 3;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: all 0.2s;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .info-toggle-btn:hover {
-      background-color: var(--forest-green);
-      color: #fff;
-    }
-
-    /* Synopsis Overlay inside Cover Frame */
     .synopsis-overlay {
       position: absolute;
       inset: 0;
@@ -604,7 +562,6 @@
       overflow: hidden;
     }
 
-    /* Card Content */
     .card-body {
       padding: 14px 16px 16px;
       display: flex;
@@ -623,7 +580,6 @@
       border-radius: 6px;
       margin-bottom: 8px;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
     }
 
     .book-title {
@@ -646,7 +602,6 @@
       margin-bottom: 12px;
     }
 
-    /* Card Footer (Price & Button) */
     .card-footer {
       margin-top: auto;
       padding-top: 12px;
@@ -664,7 +619,6 @@
       font-size: 0.82rem;
       color: #88968E;
       text-decoration: line-through;
-      font-weight: 500;
     }
 
     .selling-price {
@@ -680,15 +634,10 @@
       border-radius: 8px;
       background-color: var(--forest-green);
       color: #FFFFFF;
-      font-family: 'Inter', sans-serif;
       font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      transition: background 0.2s;
     }
 
     .preorder-btn:hover:not(:disabled) {
@@ -702,7 +651,7 @@
       cursor: not-allowed;
     }
 
-    /* ================= MODAL (PRE-ORDER POPUP) ================= */
+    /* MODAL */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -731,12 +680,6 @@
       overflow: hidden;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
       border: 2px solid var(--ochre-gold);
-      transform: translateY(15px);
-      transition: transform 0.25s ease;
-    }
-
-    .modal-backdrop.open .modal-box {
-      transform: translateY(0);
     }
 
     .modal-header {
@@ -759,13 +702,7 @@
       border: none;
       color: #fff;
       font-size: 1.5rem;
-      line-height: 1;
       cursor: pointer;
-      opacity: 0.8;
-    }
-
-    .modal-close:hover {
-      opacity: 1;
     }
 
     .modal-body {
@@ -788,7 +725,6 @@
       height: 72px;
       object-fit: cover;
       border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .summary-details h5 {
@@ -810,13 +746,6 @@
       color: var(--forest-green);
     }
 
-    .summary-price del {
-      font-size: 0.8rem;
-      color: #888;
-      font-weight: 400;
-      margin-right: 6px;
-    }
-
     .form-group {
       margin-bottom: 14px;
     }
@@ -835,13 +764,6 @@
       border: 1.5px solid #D1D5DB;
       border-radius: 8px;
       font-size: 0.92rem;
-      font-family: 'Inter', sans-serif;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--forest-green);
     }
 
     .submit-order-btn {
@@ -854,21 +776,9 @@
       font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background 0.2s;
       margin-top: 6px;
     }
 
-    .submit-order-btn:hover:not(:disabled) {
-      background-color: var(--ochre-hover);
-      color: #fff;
-    }
-
-    .submit-order-btn:disabled {
-      opacity: 0.65;
-      cursor: wait;
-    }
-
-    /* Confirmation View inside Modal */
     .confirmation-view {
       text-align: center;
       padding: 10px 4px;
@@ -886,13 +796,6 @@
       justify-content: center;
       font-size: 1.8rem;
       margin: 0 auto 14px;
-    }
-
-    .confirmation-view h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      color: var(--forest-green);
-      margin-bottom: 10px;
     }
 
     .confirmation-msg {
@@ -913,7 +816,7 @@
       border: 1px solid #F59E0B;
       padding: 10px 12px;
       border-radius: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .wa-instant-btn {
@@ -930,11 +833,6 @@
       font-weight: 700;
       font-size: 0.9rem;
       margin-bottom: 10px;
-      transition: opacity 0.2s;
-    }
-
-    .wa-instant-btn:hover {
-      opacity: 0.92;
     }
 
     .close-confirm-btn {
@@ -948,7 +846,7 @@
       cursor: pointer;
     }
 
-    /* ================= FOOTER ================= */
+    /* FOOTER */
     .footer {
       background-color: var(--forest-dark);
       color: #E5E7EB;
@@ -965,18 +863,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 24px;
-    }
-
-    .footer-brand h4 {
-      font-family: 'Playfair Display', serif;
-      color: var(--ochre-gold);
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-    }
-
-    .footer-brand p {
-      font-size: 0.85rem;
-      color: #A7B8B0;
     }
 
     .coordinator-card {
@@ -1002,12 +888,6 @@
       color: #fff;
     }
 
-    .coordinator-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
     .coord-link {
       color: var(--ochre-gold);
       text-decoration: none;
@@ -1018,11 +898,6 @@
       gap: 4px;
     }
 
-    .coord-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Back to Top Floating Button */
     .back-to-top {
       position: fixed;
       bottom: 22px;
@@ -1036,7 +911,6 @@
       font-size: 1.2rem;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1051,78 +925,22 @@
       pointer-events: auto;
     }
 
-    /* ================= MOBILE RESPONSIVENESS (2 CARDS PER ROW) ================= */
     @media (max-width: 768px) {
       .steps-grid {
         grid-template-columns: 1fr;
-        gap: 10px;
       }
-
       .book-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
-      }
-
-      .cover-wrapper {
-        height: 190px;
-        padding: 12px;
-      }
-
-      .book-cover {
-        max-width: 115px;
-      }
-
-      .card-body {
-        padding: 10px 12px 12px;
-      }
-
-      .book-title {
-        font-size: 0.92rem;
-      }
-
-      .book-author {
-        font-size: 0.75rem;
-        margin-bottom: 8px;
-      }
-
-      .selling-price {
-        font-size: 1.05rem;
-      }
-
-      .mrp-price {
-        font-size: 0.75rem;
-      }
-
-      .preorder-btn {
-        padding: 8px 10px;
-        font-size: 0.8rem;
-      }
-
-      .stock-badge {
-        font-size: 0.63rem;
-        padding: 3px 7px;
-      }
-
-      .info-toggle-btn {
-        font-size: 0.65rem;
-        padding: 3px 7px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      .book-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= TOP NAVIGATION ================= -->
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="brand">
-        <!-- Uses logo.jpg if placed in the same folder; falls back automatically to embedded SVG matching the club logo -->
         <img 
           src="logo.jpg" 
           alt="Literary Club Logo" 
@@ -1141,7 +959,6 @@
     </div>
   </header>
 
-  <!-- ================= HERO BANNER ================= -->
   <section class="hero">
     <div class="hero-inner">
       <div class="fest-badge">Annual Techfest Exclusive</div>
@@ -1153,11 +970,11 @@
       <div class="hero-pills">
         <div class="info-pill">📅 16 &amp; 17 October</div>
         <div class="info-pill">📍 In front of New EC Block</div>
+        <div class="info-pill live-counter" id="liveStockCounter">🔥 Loading Available Books...</div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 3-STEP HOW IT WORKS STRIP ================= -->
   <section class="steps-strip">
     <div class="steps-container">
       <div class="steps-grid">
@@ -1189,7 +1006,23 @@
     </div>
   </section>
 
-  <!-- ================= USER'S RECENT PRE-ORDERS (MEMORY BAR) ================= -->
+  <!-- STALL ATTRACTIONS BANNER -->
+  <section class="stall-attractions">
+    <div class="attractions-card" style="background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-light) 100%); border: 2px solid var(--ochre-gold); border-radius: 16px; padding: 20px 24px; color: #fff; text-align: center; margin: 24px auto 0; max-width: 1240px;">
+      <div class="attractions-header">
+        <h3 style="color: var(--ochre-gold); font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 4px;">✨ More Than Just Books — Visit Our Stall Experience!</h3>
+        <p style="font-size: 0.92rem; color: #E2ECE7; max-width: 800px; margin: 0 auto 12px;">
+          Visit our book stall in front of the <strong>New EC Block (16 &amp; 17 Oct)</strong> for exciting bookmarks, posters, amazing activities with exciting prizes, and in-hand hard copy photographs!
+        </p>
+      </div>
+      <div class="attractions-pills" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <span class="perk-pill">🔖 Exciting Bookmarks &amp; Posters</span>
+        <span class="perk-pill">🎯 Amazing Activities &amp; Prizes</span>
+        <span class="perk-pill">📸 In-Hand Hard Copy Photographs</span>
+      </div>
+    </div>
+  </section>
+
   <div class="my-orders-banner" id="myOrdersBanner">
     <div class="my-orders-box">
       <div class="my-orders-info">
@@ -1202,24 +1035,7 @@
       </a>
     </div>
   </div>
-  <!-- ================= STALL ATTRACTIONS & PERKS BANNER ================= -->
-  <section class="stall-attractions">
-    <div class="attractions-card">
-      <div class="attractions-header">
-        <h3>✨ More Than Just Books — Visit Our Stall Experience!</h3>
-        <p>
-          Visit our book stall in front of the <strong>New EC Block (16 &amp; 17 Oct)</strong> for exciting bookmarks, posters, amazing activities with exciting prizes, and in-hand hard copy photographs!
-        </p>
-      </div>
 
-      <div class="attractions-pills">
-        <span class="perk-pill">🔖 Exciting Bookmarks &amp; Posters</span>
-        <span class="perk-pill">🎯 Amazing Activities &amp; Prizes</span>
-        <span class="perk-pill">📸 In-Hand Hard Copy Photographs</span>
-      </div>
-    </div>
-  </section>
-  <!-- ================= MAIN BOOK CATALOG ================= -->
   <main class="catalog-section">
     <div class="section-header">
       <h3>Available Titles for Pre-Order</h3>
@@ -1229,21 +1045,17 @@
       </div>
     </div>
 
-    <div class="book-grid" id="bookGrid">
-      <!-- Book cards are rendered here dynamically via JavaScript -->
-    </div>
+    <div class="book-grid" id="bookGrid"></div>
   </main>
 
-  <!-- ================= PRE-ORDER POPUP MODAL ================= -->
   <div class="modal-backdrop" id="orderModal">
     <div class="modal-box">
       <div class="modal-header">
         <h4>Pre-Order Book</h4>
-        <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
       </div>
 
       <div class="modal-body">
-        <!-- STEP 1: FORM VIEW -->
         <div id="modalFormView">
           <div class="selected-book-summary">
             <img id="modalBookCover" src="" alt="Book Cover" />
@@ -1251,7 +1063,6 @@
               <h5 id="modalBookTitle">Book Title</h5>
               <p id="modalBookAuthor">Author Name</p>
               <div class="summary-price">
-                <del id="modalBookMrp">₹299</del>
                 <span id="modalBookPrice">₹180</span>
               </div>
             </div>
@@ -1280,7 +1091,6 @@
           </form>
         </div>
 
-        <!-- STEP 2: CONFIRMATION VIEW -->
         <div class="confirmation-view" id="modalConfirmView">
           <div class="success-icon">✓</div>
           <h4>Pre-Order Request Received!</h4>
@@ -1292,10 +1102,12 @@
           <div class="polite-hold-box">
             ⏳ Kindly note: We will hold this copy for <strong>3 hours</strong> once the payment QR is shared on WhatsApp.
           </div>
+
           <div style="background-color: #ECFDF5; border: 1.5px dashed #059669; padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; font-size: 0.82rem; color: #065F46; line-height: 1.5; text-align: left;">
             🎉 <strong>Don't Miss Out When You Visit Us!</strong><br>
             Visit our book stall for <strong>exciting bookmarks, posters, amazing activities with exciting prizes, and in-hand hard copy photographs!</strong>
           </div>
+
           <a href="#" id="instantWaBtn" target="_blank" rel="noopener" class="wa-instant-btn">
             💬 Ping Coordinator on WhatsApp for Instant QR
           </a>
@@ -1308,13 +1120,11 @@
     </div>
   </div>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <h4>Literary Club, SLIET</h4>
         <p>techFEST'26 Book Stall • 16 &amp; 17 October • In front of New EC Block</p>
-        <p style="margin-top: 6px; font-size: 0.78rem; opacity: 0.75;">Curated for the readers of Sant Longowal Institute of Engineering &amp; Technology.</p>
       </div>
 
       <div class="coordinator-card">
@@ -1329,118 +1139,94 @@
     </div>
   </footer>
 
-  <!-- Floating Back To Top Button -->
   <button class="back-to-top" id="backToTopBtn" title="Back to top">↑</button>
 
-  <!-- ================= JAVASCRIPT CONFIGURATION & LOGIC ================= -->
   <script>
-    /*************************************************************************
-     * SECTION 1: GOOGLE SHEETS WEB APP URL & COORDINATOR DETAILS
-     * Paste your deployed Google Apps Script Web App URL inside the quotes below.
-     *************************************************************************/
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw_k9T7cTNKL3oFTCzFytl15u6YKjq1TT4nolLCTUfXL_m3WFg4bL2KrmdzU3XjmcjM/exec";
-    const COORDINATOR_PHONE = "919128087852"; // Himanshu Kumar (with 91 country code)
+    const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+    const COORDINATOR_PHONE = "919128087852";
 
-
-    /*************************************************************************
-     * SECTION 2: AUTOMATIC STRUCK-THROUGH (MRP) PRICE FORMULA
-     * You can edit this function anytime to change how the struck-through MRP
-     * is calculated from your Selling Price.
-     * (Or add `mrp: 499` directly to any book object in BOOKS_DATA to override!)
-     *************************************************************************/
     function calculateStruckThroughMRP(sellingPrice, manualMrp) {
       if (manualMrp) return manualMrp;
-      if (sellingPrice >= 1500) return sellingPrice + 1099; // For full box sets like Harry Potter
-      if (sellingPrice >= 450)  return sellingPrice + 299;  // For trilogies/combos
-      if (sellingPrice >= 250)  return sellingPrice + 149;  // Standard ₹250+ books -> e.g. ₹399
-      if (sellingPrice >= 180)  return sellingPrice + 119;  // Standard ₹180+ books -> e.g. ₹299
-      return sellingPrice + 99;                             // Books under ₹180 -> e.g. ₹150 shows ₹249
+      if (sellingPrice >= 1500) return sellingPrice + 1099;
+      if (sellingPrice >= 450)  return sellingPrice + 299;
+      if (sellingPrice >= 250)  return sellingPrice + 149;
+      if (sellingPrice >= 180)  return sellingPrice + 119;
+      return sellingPrice + 99;
     }
 
-
-    /*************************************************************************
-     * SECTION 3: MASTER BOOK LIST (EDIT BOOKS, PRICES, OR COPIES HERE)
-     * - id: Unique identifier used by Google Sheets to track stock
-     * - title: Book Title
-     * - author: Author Name
-     * - price: Selling Price (in ₹)
-     * - copies: Number of available copies
-     * - genre: Default genre pill (also enhanced automatically via online API)
-     * - synopsis: Default reader blurb (also enhanced automatically via online API)
-     *************************************************************************/
     const BOOKS_DATA = [
-      { id: "b1",  title: "The Maidens", author: "Alex Michaelides", price: 180, copies: 1, cover: "https://m.media-amazon.com/images/I/815z+CF9YwL._SY425_.jpg", genre: "Psychological Thriller", synopsis: "Edward Fosca is a murderer. Of this Mariana is certain. A gripping secret-society murder mystery set at Cambridge University." },
-      { id: "b2",  title: "Norwegian Wood", author: "Haruki Murakami", price: 300, copies: 1, cover: "https://m.media-amazon.com/images/I/61-kzxoy2ZL._AC_UY218_.jpg", genre: "Literary Fiction", synopsis: "A poignant story of Toru Watanabe's nostalgic reminiscence of his college days in 1960s Tokyo, love, and loss." },
-      { id: "b3",  title: "A Thousand Splendid Suns", author: "Khaled Hosseini", price: 180, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/0/z/t/a-thousand-splendid-suns-english-paperback-original-imahk9j7bvfdfbdy.jpeg?q=70", genre: "Historical Fiction", synopsis: "An unforgettable portrait of two generations of Afghan women brought together by tragedy, war, and enduring hope." },
-      { id: "b4",  title: "Fahrenheit 451", author: "Ray Bradbury", price: 190, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/jp8ngcw0-1/book/3/1/9/fahrenheit-451-original-imafbj2gkh8fgh65.jpeg?q=70", genre: "Dystopian Classic", synopsis: "In a terrifying future where books are outlawed and burned by firemen, Guy Montag begins to question everything." },
-      { id: "b5",  title: "The Metamorphosis", author: "Franz Kafka", price: 150, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/x/y/t/the-metamorphosis-franz-kafka-original-imahmcw5rwhuzrm6.jpeg?q=70", genre: "Classic Fiction", synopsis: "Gregor Samsa wakes one morning to find himself transformed into a monstrous vermin in this existential masterpiece." },
-      { id: "b6",  title: "To Kill a Mockingbird", author: "Harper Lee", price: 170, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/kufuikw0/book/2/r/9/to-kill-a-mockingbird-original-imag7kbzthbfqwth.jpeg?q=70", genre: "Classic Literature", synopsis: "Through the eyes of young Scout Finch, lawyer Atticus Finch defends an innocent Black man in the American South." },
-      { id: "b7",  title: "A Man Called Ove", author: "Fredrik Backman", price: 200, copies: 1, cover: "https://m.media-amazon.com/images/I/81pWrlNL-CL._AC_UY218_.jpg", genre: "Contemporary Fiction", synopsis: "Meet Ove—the grumpy yet lovable curmudgeon whose solitary world is turned upside down by boisterous new neighbors." },
+      { id: "b1",  title: "The Maidens", author: "Alex Michaelides", price: 180, copies: 1, genre: "Psychological Thriller", synopsis: "Edward Fosca is a murderer. Of this Mariana is certain. A gripping secret-society murder mystery set at Cambridge University." },
+      { id: "b2",  title: "Norwegian Wood", author: "Haruki Murakami", price: 300, copies: 1, genre: "Literary Fiction", synopsis: "A poignant story of Toru Watanabe's nostalgic reminiscence of his college days in 1960s Tokyo, love, and loss." },
+      { id: "b3",  title: "A Thousand Splendid Suns", author: "Khaled Hosseini", price: 180, copies: 1, genre: "Historical Fiction", synopsis: "An unforgettable portrait of two generations of Afghan women brought together by tragedy, war, and enduring hope." },
+      { id: "b4",  title: "Fahrenheit 451", author: "Ray Bradbury", price: 190, copies: 1, genre: "Dystopian Classic", synopsis: "In a terrifying future where books are outlawed and burned by firemen, Guy Montag begins to question everything." },
+      { id: "b5",  title: "The Metamorphosis", author: "Franz Kafka", price: 150, copies: 1, genre: "Classic Fiction", synopsis: "Gregor Samsa wakes one morning to find himself transformed into a monstrous vermin in this existential masterpiece." },
+      { id: "b6",  title: "To Kill a Mockingbird", author: "Harper Lee", price: 170, copies: 1, genre: "Classic Literature", synopsis: "Through the eyes of young Scout Finch, lawyer Atticus Finch defends an innocent Black man in the American South." },
+      { id: "b7",  title: "A Man Called Ove", author: "Fredrik Backman", price: 200, copies: 1, genre: "Contemporary Fiction", synopsis: "Meet Ove—the grumpy yet lovable curmudgeon whose solitary world is turned upside down by boisterous new neighbors." },
       { id: "b8",  title: "The Silent Patient", author: "Alex Michaelides", price: 200, copies: 1, genre: "Mystery Thriller", synopsis: "Alicia Berenson shoots her husband five times and never speaks another word. Criminal psychotherapist Theo Faber is determined to uncover why." },
-      { id: "b9",  title: "The Kite Runner", author: "Khaled Hosseini", price: 250, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/l1dwknk0/book/v/k/j/the-kite-runner-original-imagcy8ztzwgfnsj.jpeg?q=70", genre: "Historical Drama", synopsis: "A heartbreaking and redemptive story of friendship, betrayal, and devotion between two boys growing up in Kabul." },
-      { id: "b10", title: "The Alchemist", author: "Paulo Coelho", price: 210, copies: 1, cover: "https://m.media-amazon.com/images/I/617lxveUjYL._AC_UY218_.jpg", genre: "Philosophical Fiction", synopsis: "Follow Andalusian shepherd boy Santiago on his timeless quest across the desert in search of his Personal Legend." },
-      { id: "b11", title: "Beyond Good and Evil", author: "Friedrich Nietzsche", price: 150, copies: 1, cover: "https://m.media-amazon.com/images/I/71ViaLzMZ-L._AC_UY218_.jpg", genre: "Philosophy", synopsis: "Nietzsche's landmark critique of traditional morality, challenging philosophers to think beyond dogmatic binaries." },
+      { id: "b9",  title: "The Kite Runner", author: "Khaled Hosseini", price: 250, copies: 1, genre: "Historical Drama", synopsis: "A heartbreaking and redemptive story of friendship, betrayal, and devotion between two boys growing up in Kabul." },
+      { id: "b10", title: "The Alchemist", author: "Paulo Coelho", price: 210, copies: 1, genre: "Philosophical Fiction", synopsis: "Follow Andalusian shepherd boy Santiago on his timeless quest across the desert in search of his Personal Legend." },
+      { id: "b11", title: "Beyond Good and Evil", author: "Friedrich Nietzsche", price: 150, copies: 1, genre: "Philosophy", synopsis: "Nietzsche's landmark critique of traditional morality, challenging philosophers to think beyond dogmatic binaries." },
       { id: "b12", title: "Good to Great", author: "Jim Collins", price: 210, copies: 1, genre: "Business & Strategy", synopsis: "Why do some companies make the leap to extraordinary results while others don't? Essential leadership insights." },
       { id: "b13", title: "A Good Girl's Guide to Murder", author: "Holly Jackson", price: 260, copies: 1, genre: "Mystery / YA", synopsis: "Five years ago, schoolgirl Andie Bell was murdered. Pip is determined to prove the closed case got the wrong person." },
-      { id: "b14", title: "Deep Work", author: "Cal Newport", price: 190, copies: 1, cover: "https://m.media-amazon.com/images/I/61zt25yYrCL._AC_UY218_.jpg", genre: "Productivity", synopsis: "Rules for focused success in a distracted world—master hard skills quickly and produce elite-level work." },
+      { id: "b14", title: "Deep Work", author: "Cal Newport", price: 190, copies: 1, genre: "Productivity", synopsis: "Rules for focused success in a distracted world—master hard skills quickly and produce elite-level work." },
       { id: "b15", title: "Surrounded by Narcissists", author: "Thomas Erikson", price: 230, copies: 2, genre: "Psychology", synopsis: "Learn how to recognize, handle, and protect your energy from narcissistic behavior in everyday life." },
-      { id: "b16", title: "Kafka on the Shore", author: "Haruki Murakami", price: 250, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/h/1/y/kafka-on-the-shore-resized-original-imahygtzmwf6taa2.jpeg?q=70", genre: "Magical Realism", synopsis: "A mind-bending metaphysical odyssey following runaway teen Kafka Tamura and the aging, cat-talking Nakata." },
+      { id: "b16", title: "Kafka on the Shore", author: "Haruki Murakami", price: 250, copies: 1, genre: "Magical Realism", synopsis: "A mind-bending metaphysical odyssey following runaway teen Kafka Tamura and the aging, cat-talking Nakata." },
       { id: "b17", title: "The Intruder", author: "Freida McFadden", price: 170, copies: 1, genre: "Psychological Thriller", synopsis: "A fast-paced, twist-packed domestic thriller from bestselling suspense author Freida McFadden." },
       { id: "b18", title: "The Teacher", author: "Freida McFadden", price: 160, copies: 1, genre: "Suspense Thriller", synopsis: "Nothing is as it seems at Caseham High. Secrets, obsession, and shocking twists collide." },
-      { id: "b19", title: "Fame, Fortune and Ambition", author: "Osho", price: 250, copies: 1, cover: "https://m.media-amazon.com/images/I/616YRWOFqhL._AC_UY218_.jpg", genre: "Spirituality", synopsis: "An eye-opening exploration of the roots of human ambition, success, and inner fulfillment." },
-      { id: "b20", title: "Animal Farm", author: "George Orwell", price: 160, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/kit6hzk0-0/book/i/6/6/animal-farm-original-imafyguxjyaqah3t.jpeg?q=70", genre: "Political Satire", synopsis: "When the downtrodden animals of Manor Farm overthrow their master, their utopian dream takes a dark totalitarian turn." },
-      { id: "b21", title: "The Trial", author: "Franz Kafka", price: 180, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/e/w/m/the-trail-original-imagsp37bjzshydu.jpeg?q=70", genre: "Classic Fiction", synopsis: "Josef K. is arrested and prosecuted by a remote, inaccessible authority for a crime never revealed to him." },
-      { id: "b22", title: "1984", author: "George Orwell", price: 170, copies: 1, cover: "https://m.media-amazon.com/images/I/61OYuB86NFL._AC_UY218_.jpg", genre: "Dystopian Classic", synopsis: "Big Brother is watching you. Winston Smith rebels against the Party in Orwell's definitive dystopian masterpiece." },
+      { id: "b19", title: "Fame, Fortune and Ambition", author: "Osho", price: 250, copies: 1, genre: "Spirituality", synopsis: "An eye-opening exploration of the roots of human ambition, success, and inner fulfillment." },
+      { id: "b20", title: "Animal Farm", author: "George Orwell", price: 160, copies: 1, genre: "Political Satire", synopsis: "When the downtrodden animals of Manor Farm overthrow their master, their utopian dream takes a dark totalitarian turn." },
+      { id: "b21", title: "The Trial", author: "Franz Kafka", price: 180, copies: 1, genre: "Classic Fiction", synopsis: "Josef K. is arrested and prosecuted by a remote, inaccessible authority for a crime never revealed to him." },
+      { id: "b22", title: "1984", author: "George Orwell", price: 170, copies: 1, genre: "Dystopian Classic", synopsis: "Big Brother is watching you. Winston Smith rebels against the Party in Orwell's definitive dystopian masterpiece." },
       { id: "b23", title: "The 48 Laws of Power", author: "Robert Greene", price: 230, copies: 1, genre: "Strategy & Self-Help", synopsis: "Three thousand years of the history of power distilled into 48 essential laws of strategy and influence." },
-      { id: "b24", title: "Truth Without Apology", author: "Acharya Prashant", price: 190, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/x/j/q/-resized-original-imahgmnqhrhwdbxg.jpeg?q=70", genre: "Philosophy", synopsis: "Direct, uncompromising reflections that cut through illusions and everyday mental conditioning." },
-      { id: "b25", title: "White Nights", author: "Fyodor Dostoyevsky", price: 120, copies: 2, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/n/o/o/white-nights-original-imahp8aseqdhtt2z.jpeg?q=70", genre: "Russian Classic", synopsis: "A tender, bittersweet tale of a lonely dreamer who falls in love over four magical nights in St. Petersburg." },
-      { id: "b26", title: "The Art of Not Overthinking", author: "Shaurya Kapoor", price: 170, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/a/u/k/the-art-of-not-overthinking-unlock-your-mind-s-true-potential-resized-original-imahhhzhkhy6fyre.jpeg?q=70", genre: "Self-Help", synopsis: "Practical techniques to quiet mental noise, overcome anxiety, and reclaim peace of mind." },
-      { id: "b27", title: "Ikigai", author: "Hector Garcia & Francesc Miralles", price: 150, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/j/y/b/ikigai-original-imagwfmjuge5zw3m.jpeg?q=70", genre: "Lifestyle & Wellness", synopsis: "The Japanese secret to a long, purposeful, and happy life inspired by the centenarians of Okinawa." },
+      { id: "b24", title: "Truth Without Apology", author: "Acharya Prashant", price: 190, copies: 1, genre: "Philosophy", synopsis: "Direct, uncompromising reflections that cut through illusions and everyday mental conditioning." },
+      { id: "b25", title: "White Nights", author: "Fyodor Dostoyevsky", price: 120, copies: 2, genre: "Russian Classic", synopsis: "A tender, bittersweet tale of a lonely dreamer who falls in love over four magical nights in St. Petersburg." },
+      { id: "b26", title: "The Art of Not Overthinking", author: "Shaurya Kapoor", price: 170, copies: 1, genre: "Self-Help", synopsis: "Practical techniques to quiet mental noise, overcome anxiety, and reclaim peace of mind." },
+      { id: "b27", title: "Ikigai", author: "Hector Garcia & Francesc Miralles", price: 150, copies: 1, genre: "Lifestyle & Wellness", synopsis: "The Japanese secret to a long, purposeful, and happy life inspired by the centenarians of Okinawa." },
       { id: "b28", title: "A Brief History of Time", author: "Stephen Hawking", price: 230, copies: 1, genre: "Popular Science", synopsis: "From the Big Bang to black holes—Stephen Hawking explains the universe's grandest mysteries." },
-      { id: "b29", title: "Crime and Punishment", author: "Fyodor Dostoyevsky", price: 230, copies: 1,cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/f/7/2/crime-and-punishment-paperback-legendary-novel-of-conscience-original-imahhefb6uucdc9a.jpeg?q=70", genre: "Psychological Classic", synopsis: "Raskolnikov's anguished moral and psychological dilemma following a calculated crime in St. Petersburg." },
+      { id: "b29", title: "Crime and Punishment", author: "Fyodor Dostoyevsky", price: 230, copies: 1, genre: "Psychological Classic", synopsis: "Raskolnikov's anguished moral and psychological dilemma following a calculated crime in St. Petersburg." },
       { id: "b30", title: "The Housemaid", author: "Freida McFadden", price: 220, copies: 1, genre: "Psychological Thriller", synopsis: "Welcome to the family. Millie cleans the Winchesters' house, but locked doors upstairs hide dangerous secrets." },
-      { id: "b31", title: "The Bell Jar", author: "Sylvia Plath", price: 120, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/n/m/a/the-bell-jar-original-imahbvb8uv9xmqkh.jpeg?q=70", genre: "Modern Classic", synopsis: "Esther Greenwood's brilliant, haunting internship summer in 1950s New York and her battle with identity." },
+      { id: "b31", title: "The Bell Jar", author: "Sylvia Plath", price: 120, copies: 1, genre: "Modern Classic", synopsis: "Esther Greenwood's brilliant, haunting internship summer in 1950s New York and her battle with identity." },
       { id: "b32", title: "Nothing Like the Movies", author: "Lynn Painter", price: 180, copies: 1, genre: "Contemporary Romance", synopsis: "Wes and Liz navigate second chances, college heartbreak, and cinema-worthy romance." },
       { id: "b33", title: "Better Than the Movies", author: "Lynn Painter", price: 170, copies: 1, genre: "Rom-Com", synopsis: "Hopeless romantic Liz Buxbaum teams up with her annoying next-door neighbor Wes in a heartwarming rom-com." },
       { id: "b34", title: "The Magic", author: "Rhonda Byrne", price: 150, copies: 1, genre: "Self-Improvement", synopsis: "A 28-day journey displaying how gratitude can transform your everyday life and perspective." },
-      { id: "b35", title: "Half Girlfriend", author: "Chetan Bhagat", price: 120, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/book/1/1/4/half-girlfriend-original-imaeaywyr6a5nazv.jpeg?q=70", genre: "Indian Fiction", synopsis: "Madhav, a boy from Bihar, falls for Riya, a high-society Delhi girl who agrees to be his 'half girlfriend'." },
+      { id: "b35", title: "Half Girlfriend", author: "Chetan Bhagat", price: 120, copies: 1, genre: "Indian Fiction", synopsis: "Madhav, a boy from Bihar, falls for Riya, a high-society Delhi girl who agrees to be his 'half girlfriend'." },
       { id: "b36", title: "The Art of Reading Minds", author: "Henrik Fexeus", price: 150, copies: 1, genre: "Psychology", synopsis: "How to understand and influence others seamlessly without them noticing through body language and psychology." },
       { id: "b37", title: "The India Way", author: "S. Jaishankar", price: 250, copies: 1, genre: "Geopolitics", synopsis: "India's External Affairs Minister analyzes global strategy and India's rise in an uncertain world." },
       { id: "b38", title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", price: 160, copies: 1, genre: "History & Science", synopsis: "How did Homo sapiens come to rule the planet? A sweeping narrative of human history and civilization." },
       { id: "b39", title: "The Oath of the Vayuputras", author: "Amish Tripathi", price: 220, copies: 1, genre: "Mythological Fiction", synopsis: "The epic conclusion to the Shiva Trilogy as Shiva gathers his forces against the true evil." },
       { id: "b40", title: "The Secret of the Nagas", author: "Amish Tripathi", price: 200, copies: 1, genre: "Mythological Fiction", synopsis: "Book 2 of the Shiva Trilogy—Shiva travels across the land of Meluha and Branga to hunt down the Naga warrior." },
       { id: "b41", title: "The Immortals of Meluha", author: "Amish Tripathi", price: 210, copies: 1, genre: "Mythological Fiction", synopsis: "Book 1 of the Shiva Trilogy—Tibetan tribal leader Shiva arrives in Meluha and discovers his destiny as the Neelkanth." },
-      { id: "b42", title: "Shiva Trilogy (Combined Set of 3)", author: "Amish Tripathi", price: 500, copies: 1, cover: "https://m.media-amazon.com/images/I/81Oi27lSgDL._AC_UY218_.jpg", genre: "Combo Box Set", synopsis: "Complete 3-book combo set: The Immortals of Meluha, The Secret of the Nagas, and The Oath of the Vayuputras." },
+      { id: "b42", title: "Shiva Trilogy (Combined Set of 3)", author: "Amish Tripathi", price: 500, copies: 1, genre: "Combo Box Set", synopsis: "Complete 3-book combo set: The Immortals of Meluha, The Secret of the Nagas, and The Oath of the Vayuputras." },
       { id: "b43", title: "India That Is Bharat", author: "J. Sai Deepak", price: 250, copies: 1, genre: "History & Polity", synopsis: "An incisive exploration of coloniality, civilization, and the constitutional history of Bharat." },
       { id: "b44", title: "The Art of Being Alone", author: "Renuka Gavrani", price: 180, copies: 1, genre: "Self-Help", synopsis: "Transform loneliness into empowering solitude and fall in love with your own company." },
-      { id: "b45", title: "Build, Don't Talk", author: "Raj Shamani", price: 200, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/t/z/t/build-don-t-talk-things-you-wish-you-were-taught-in-school-resized-original-imah9t22gzbgfkq6.jpeg?q=70", genre: "Entrepreneurship", synopsis: "Practical things you wish you were taught in school about mindset, finance, communication, and career growth." },
-      { id: "b46", title: "Ignited Minds", author: "A.P.J. Abdul Kalam", price: 200, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/u/m/c/ignited-minds-original-imahrqg6ytg4ns3x.jpeg?q=70", genre: "Inspiration", synopsis: "Dr. Kalam's inspiring call to the youth of India to unleash the power within and build a developed nation." },
-      { id: "b47", title: "The Art of War", author: "Sun Tzu", price: 170, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/kz4gh3k0/book/s/b/l/the-art-of-war-original-imagb7advrggxmbe.jpeg?q=70", genre: "Classic Strategy", synopsis: "The ancient Chinese military treatise that remains the ultimate guide to strategy, leadership, and tactics." },
+      { id: "b45", title: "Build, Don't Talk", author: "Raj Shamani", price: 200, copies: 1, genre: "Entrepreneurship", synopsis: "Practical things you wish you were taught in school about mindset, finance, communication, and career growth." },
+      { id: "b46", title: "Ignited Minds", author: "A.P.J. Abdul Kalam", price: 200, copies: 1, genre: "Inspiration", synopsis: "Dr. Kalam's inspiring call to the youth of India to unleash the power within and build a developed nation." },
+      { id: "b47", title: "The Art of War", author: "Sun Tzu", price: 170, copies: 1, genre: "Classic Strategy", synopsis: "The ancient Chinese military treatise that remains the ultimate guide to strategy, leadership, and tactics." },
       { id: "b48", title: "Hyperfocus", author: "Chris Bailey", price: 180, copies: 1, genre: "Productivity", synopsis: "How to manage your attention in a world of distraction—master both deep focus and creative scatterfocus." },
-      { id: "b49", title: "The Art of Letting Go", author: "Nick Trenton", price: 200, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/8/e/5/the-art-of-letting-go-resized-original-imahmgkuau9v6xsy.jpeg?q=70", genre: "Mindfulness", synopsis: "How to stop overthinking, release past baggage, and move forward with emotional freedom." },
+      { id: "b49", title: "The Art of Letting Go", author: "Nick Trenton", price: 200, copies: 1, genre: "Mindfulness", synopsis: "How to stop overthinking, release past baggage, and move forward with emotional freedom." },
       { id: "b50", title: "The Diary of a CEO", author: "Steven Bartlett", price: 150, copies: 1, genre: "Business & Life", synopsis: "The 33 laws of business and life rooted in psychology and interviews with the world's most successful minds." },
-      { id: "b51", title: "Meditations", author: "Marcus Aurelius", price: 180, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/w/j/k/meditations-claasics-original-imahcgpf4a8hzr4n.jpeg?q=70", genre: "Stoic Philosophy", synopsis: "The private journal of Roman Emperor Marcus Aurelius—timeless Stoic wisdom on resilience and virtue." },
+      { id: "b51", title: "Meditations", author: "Marcus Aurelius", price: 180, copies: 1, genre: "Stoic Philosophy", synopsis: "The private journal of Roman Emperor Marcus Aurelius—timeless Stoic wisdom on resilience and virtue." },
       { id: "b52", title: "The 5 AM Club", author: "Robin Sharma", price: 220, copies: 1, genre: "Personal Growth", synopsis: "Own your morning, elevate your life—discover the revolutionary morning routine that maximizes productivity." },
       { id: "b53", title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", price: 150, copies: 1, genre: "Self-Help", synopsis: "A counterintuitive approach to living a good life by choosing only what truly matters to care about." },
       { id: "b54", title: "Meditation and Its Methods", author: "Swami Vivekananda", price: 160, copies: 1, genre: "Spirituality", synopsis: "Profound teachings by Swami Vivekananda on concentration, inner stillness, and mastering the mind." },
-      { id: "b55", title: "How to Win Friends and Influence People", author: "Dale Carnegie", price: 180, copies: 1, cover: "https://m.media-amazon.com/images/I/618XGVFYlwL._AC_UY218_.jpg", genre: "Communication", synopsis: "The timeless bestseller on human relations, charisma, leadership, and winning people to your way of thinking." },
+      { id: "b55", title: "How to Win Friends and Influence People", author: "Dale Carnegie", price: 180, copies: 1, genre: "Communication", synopsis: "The timeless bestseller on human relations, charisma, leadership, and winning people to your way of thinking." },
       { id: "b56", title: "Atomic Habits", author: "James Clear", price: 280, copies: 1, genre: "Habit Building", synopsis: "An easy and proven way to build good habits and break bad ones through tiny 1% daily improvements." },
       { id: "b57", title: "The Psychology of Money", author: "Morgan Housel", price: 220, copies: 1, genre: "Personal Finance", synopsis: "Timeless lessons on wealth, greed, and happiness showing that financial success is more about behavior than math." },
-      { id: "b58", title: "The Power of Your Subconscious Mind", author: "Joseph Murphy", price: 180, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/h/q/p/the-power-of-your-subconscious-mind-resized-original-imahg2mqhnhebsyc.jpeg?q=70", genre: "Self-Help", synopsis: "Unlock the hidden reservoir of mental power within you to overcome obstacles and achieve your goals." },
-      { id: "b59", title: "Wings of Fire", author: "A.P.J. Abdul Kalam", price: 170, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/r/l/6/wings-of-fire-original-imahyn2agttgd9wg.jpeg?q=70", genre: "Autobiography", synopsis: "The inspiring autobiography of Dr. A.P.J. Abdul Kalam—from Rameswaram to India's Missile Man and President." },
-      { id: "b60", title: "Jaun Elia: Ek Ajab Ghazab Shayar", author: "Muntazir Firozabadi", price: 200, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/y/h/5/john-elia-ajab-gajab-shayari-original-imahrzkax4cjdxhh.jpeg?q=70", genre: "Urdu Poetry / Shayari", synopsis: "A soulful compilation of the life and unforgettable ghazals and shayari of legendary poet Jaun Elia." },
+      { id: "b58", title: "The Power of Your Subconscious Mind", author: "Joseph Murphy", price: 180, copies: 1, genre: "Self-Help", synopsis: "Unlock the hidden reservoir of mental power within you to overcome obstacles and achieve your goals." },
+      { id: "b59", title: "Wings of Fire", author: "A.P.J. Abdul Kalam", price: 170, copies: 1, genre: "Autobiography", synopsis: "The inspiring autobiography of Dr. A.P.J. Abdul Kalam—from Rameswaram to India's Missile Man and President." },
+      { id: "b60", title: "Jaun Elia: Ek Ajab Ghazab Shayar", author: "Muntazir Firozabadi", price: 200, copies: 1, genre: "Urdu Poetry / Shayari", synopsis: "A soulful compilation of the life and unforgettable ghazals and shayari of legendary poet Jaun Elia." },
       { id: "b61", title: "Yaar Papa", author: "Divya Prakash Dubey", price: 160, copies: 1, genre: "Hindi Literature", synopsis: "Heartfelt, relatable Hindi storytelling exploring warmth, family bonds, and everyday emotions." },
-      { id: "b62", title: "Deewar Mein Ek Khirkee Rahati Thi", author: "Vinod Kumar Shukla", price: 140, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/m/d/6/deewar-mein-ek-khidki-rahti-thi-resized-original-imahhf5yhzksgbzd.jpeg?q=70", genre: "Hindi Sahitya", synopsis: "Sahitya Akademi Award-winning Hindi novel celebrating the magical beauty of simple, ordinary life." },
+      { id: "b62", title: "Deewar Mein Ek Khirkee Rahati Thi", author: "Vinod Kumar Shukla", price: 140, copies: 1, genre: "Hindi Sahitya", synopsis: "Sahitya Akademi Award-winning Hindi novel celebrating the magical beauty of simple, ordinary life." },
       { id: "b63", title: "October Junction", author: "Divya Prakash Dubey", price: 180, copies: 2, genre: "Hindi Romance", synopsis: "Sudheer and Chitra meet once every October—a poignant modern Hindi novel of love, destiny, and memories." },
       { id: "b64", title: "Musafir Cafe", author: "Divya Prakash Dubey", price: 170, copies: 1, genre: "Hindi Fiction", synopsis: "Sudha and Chander navigate modern love, freedom, and life choices in this popular Hindi novel." },
-      { id: "b65", title: "Ret Ki Machhli", author: "Kanta Bharti", price: 140, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/4/f/p/ret-ki-machhali-original-imahd7duqgff2kuk.jpeg?q=70", genre: "Hindi Classic", synopsis: "A deeply moving, raw Hindi literary classic portraying emotional turmoil, love, and resilience." },
-      { id: "b66", title: "Gunahon Ka Devta", author: "Dharamvir Bharati", price: 190, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/r/m/c/gunaho-ka-devta-original-imahr6rem842vjgy.jpeg?q=70", genre: "Hindi Classic", synopsis: "The immortal tragic love story of Chander and Sudha set in Allahabad—one of Hindi literature's greatest classics." },
+      { id: "b65", title: "Ret Ki Machhli", author: "Kanta Bharti", price: 140, copies: 1, genre: "Hindi Classic", synopsis: "A deeply moving, raw Hindi literary classic portraying emotional turmoil, love, and resilience." },
+      { id: "b66", title: "Gunahon Ka Devta", author: "Dharamvir Bharati", price: 190, copies: 1, genre: "Hindi Classic", synopsis: "The immortal tragic love story of Chander and Sudha set in Allahabad—one of Hindi literature's greatest classics." },
       { id: "b67", title: "Godan", author: "Munshi Premchand", price: 200, copies: 1, genre: "Hindi Classic", synopsis: "Premchand's magnum opus following Hori, a poor peasant whose deepest dream is to own a cow." },
       { id: "b68", title: "Kafan", author: "Munshi Premchand", price: 170, copies: 1, genre: "Hindi Short Stories", synopsis: "A powerful collection of Munshi Premchand's most hard-hitting and realistic stories on human nature and society." },
       { id: "b69", title: "Gaban", author: "Munshi Premchand", price: 150, copies: 1, genre: "Hindi Classic", synopsis: "A gripping social novel examining middle-class vanity, moral choices, and redemption through Jalpa and Ramanath." },
-      { id: "b70", title: "Harry Potter (Complete 7-Book Set)", author: "J.K. Rowling", price: 1750, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/s/q/p/caja-harry-potter-la-serie-completa-harry-potter-paperback-boxed-original-imahp5cf8tbmvjwg.jpeg?q=70", genre: "Fantasy Box Set", synopsis: "The complete 7-book Hogwarts adventure—from The Philosopher's Stone to The Deathly Hallows!" },
+      { id: "b70", title: "Harry Potter (Complete 7-Book Set)", author: "J.K. Rowling", price: 1900, copies: 1, genre: "Fantasy Box Set", synopsis: "The complete 7-book Hogwarts adventure—from The Philosopher's Stone to The Deathly Hallows!" },
       { id: "b71", title: "How to Kill Men and Get Away With It", author: "Katy Brent", price: 180, copies: 1, genre: "Dark Comedy Thriller", synopsis: "Meet Kitty Collins—a wildly entertaining, darkly funny thriller about a vigilante influencer." },
-      { id: "b72", title: "The White Lotus", author: "Osho", price: 300, copies: 1, cover: "https://rukminim2.flixcart.com/image/612/612/xif0q/book/v/x/p/-original-imagxngdfrjfgymu.jpeg?q=70", genre: "Spiritual Discourse", synopsis: "Osho's illuminating discourses on the philosophy of Bodhidharma and Zen awakening." },
+      { id: "b72", title: "The White Lotus", author: "Osho", price: 300, copies: 1, genre: "Spiritual Discourse", synopsis: "Osho's illuminating discourses on the philosophy of Bodhidharma and Zen awakening." },
       { id: "b73", title: "Harry Potter and the Philosopher's Stone (Part 1)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 1: An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family, and the terrible evil that haunts the magical world." },
       { id: "b74", title: "Harry Potter and the Chamber of Secrets (Part 2)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 2: Strange things start happening at Hogwarts when a mysterious chamber is opened, leaving students paralyzed and dark secrets unearthed." },
       { id: "b75", title: "Harry Potter and the Prisoner of Azkaban (Part 3)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 3: Harry returns for his third year at Hogwarts, where he must confront Sirius Black, a dangerous escaped convict linked to his past." },
@@ -1448,17 +1234,12 @@
       { id: "b77", title: "Harry Potter and the Order of the Phoenix (Part 5)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 5: Voldemort has returned, and Ministry denial forces Harry and Dumbledore's Army to prepare for war in secret." },
       { id: "b78", title: "Harry Potter and the Half-Blood Prince (Part 6)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 6: As dark forces gather strength, Harry and Dumbledore investigate Lord Voldemort's past and the secret of his horcruxes." },
       { id: "b79", title: "Harry Potter and the Deathly Hallows (Part 7)", author: "J.K. Rowling", price: 200, copies: 1, genre: "Fantasy", synopsis: "Part 7: The epic final showdown. Harry, Ron, and Hermione embark on a dangerous mission to destroy the remaining horcruxes and defeat Voldemort." },
-      { id: "b80", title: "The Politics", author: "Aristotle", price: 180, copies: 1, genre: "Classical Philosophy", synopsis: "Aristotle's foundational treatise exploring the ethics of governance, citizenship, justice, and the ideal structure of the state." },
+      { id: "b80", title: "The Politics", author: "Aristotle", price: 180, copies: 1, genre: "Classical Philosophy", synopsis: "Aristotle's foundational treatise exploring the ethics of governance, citizenship, justice, and the ideal structure of the state." }
     ];
 
-
-    /*************************************************************************
-   /*************************************************************************
-     * SECTION 4: STATE & INITIALIZATION
-     *************************************************************************/
     let orderCountsByBookId = {};
     const LOCAL_ORDERS_KEY = "sliet_litclub_preorders_2026";
-    const API_CACHE_KEY = "sliet_litclub_bookmeta_v2"; // bumped to v2 to clear old wrong covers
+    const API_CACHE_KEY = "sliet_litclub_bookmeta_v3";
     let bookMetaCache = {};
 
     try {
@@ -1473,9 +1254,6 @@
       const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450">
         <rect width="300" height="450" fill="#163828"/>
         <rect x="16" y="16" width="268" height="418" fill="none" stroke="#DF9A63" stroke-width="3"/>
-        <rect x="24" y="24" width="252" height="402" fill="none" stroke="#DF9A63" stroke-width="1" opacity="0.5"/>
-        <circle cx="150" cy="110" r="28" fill="#DF9A63" opacity="0.2"/>
-        <path d="M135 120 C150 95 165 95 170 125" stroke="#DF9A63" stroke-width="3" fill="none"/>
         <text x="150" y="215" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">${safeTitle}</text>
         <line x1="90" y1="250" x2="210" y2="250" stroke="#DF9A63" stroke-width="2"/>
         <text x="150" y="285" font-family="Arial, sans-serif" font-size="14" fill="#DF9A63" text-anchor="middle">${safeAuthor}</text>
@@ -1502,9 +1280,7 @@
       let myOrders = [];
       try {
         myOrders = JSON.parse(localStorage.getItem(LOCAL_ORDERS_KEY) || "[]");
-      } catch (e) {
-        myOrders = [];
-      }
+      } catch (e) {}
 
       const banner = document.getElementById("myOrdersBanner");
       const listEl = document.getElementById("myOrdersList");
@@ -1516,20 +1292,15 @@
       }
 
       banner.style.display = "block";
-      const titles = myOrders.map(o => `${o.title} (₹${o.price})`).join(" • ");
-      listEl.textContent = titles;
-
+      listEl.textContent = myOrders.map(o => `${o.title} (₹${o.price})`).join(" • ");
       const lastOrder = myOrders[myOrders.length - 1];
-      const msg = `Hi Himanshu, I have pre-ordered "${ myOrders.map(o => o.title).join(", ") }" on the Literary Club techFEST'26 website (Name: ${lastOrder.name}, Dept: ${lastOrder.dept}). Please share the payment QR code!`;
+      const msg = `Hi Himanshu, I have pre-ordered "${ myOrders.map(o => o.title).join(", ") }" on the Literary Club techFEST'26 website (Name: ${lastOrder.name}). Please share the payment QR code!`;
       waLink.href = `https://wa.me/${COORDINATOR_PHONE}?text=${encodeURIComponent(msg)}`;
     }
 
-
-    /*************************************************************************
-     * SECTION 5: RENDER BOOK GRID (SUPPORTS MANUAL `cover` OVERRIDE)
-     *************************************************************************/
     function renderBookCatalog() {
       const grid = document.getElementById("bookGrid");
+      if (!grid) return;
       grid.innerHTML = "";
 
       const sortedBooks = [...BOOKS_DATA].sort((a, b) => {
@@ -1545,7 +1316,6 @@
         const isSoldOut = remaining === 0;
         const mrp = calculateStruckThroughMRP(book.price, book.mrp);
         const cached = bookMetaCache[book.id] || {};
-        // Priority: 1. Manual book.cover -> 2. Cached API cover -> 3. Stylized SVG
         const coverSrc = book.cover || cached.cover || getStylizedCoverSVG(book.title, book.author);
         const genreText = book.genre || cached.genre || "Featured Read";
         const synopsisText = book.synopsis || cached.synopsis;
@@ -1562,140 +1332,43 @@
 
         const card = document.createElement("article");
         card.className = `book-card ${isSoldOut ? "is-sold-out" : ""}`;
-        card.id = `card-${book.id}`;
 
         card.innerHTML = `
           <div class="cover-wrapper">
-            <button type="button" class="info-toggle-btn" data-toggle-info="${book.id}" title="Read short synopsis">
-              ℹ About
-            </button>
+            <button type="button" class="info-toggle-btn" data-toggle-info="${book.id}">ℹ About</button>
             <span class="stock-badge ${badgeClass}">${badgeLabel}</span>
-            <img 
-              src="${coverSrc}" 
-              alt="${book.title}" 
-              class="book-cover" 
-              id="cover-${book.id}"
-              loading="lazy"
-              onerror="this.onerror=null; this.src='${getStylizedCoverSVG(book.title, book.author)}';"
-            />
+            <img src="${coverSrc}" alt="${book.title}" class="book-cover" id="cover-${book.id}" loading="lazy" />
             <div class="synopsis-overlay" id="synopsis-${book.id}">
               <h5>About This Book</h5>
               <p id="synopsis-text-${book.id}">${synopsisText}</p>
             </div>
           </div>
-
           <div class="card-body">
             <span class="genre-pill" id="genre-${book.id}">${genreText}</span>
             <h4 class="book-title" title="${book.title}">${book.title}</h4>
             <p class="book-author">by ${book.author}</p>
-
             <div class="card-footer">
               <div class="price-row">
                 <span class="mrp-price">MRP ₹${mrp}</span>
                 <span class="selling-price">₹${book.price}</span>
               </div>
-              <button 
-                type="button" 
-                class="preorder-btn" 
-                data-preorder-id="${book.id}"
-                ${isSoldOut ? "disabled" : ""}
-              >
+              <button type="button" class="preorder-btn" data-preorder-id="${book.id}" ${isSoldOut ? "disabled" : ""}>
                 ${isSoldOut ? "Sold Out" : "Pre-Order Now"}
               </button>
             </div>
           </div>
         `;
-
         grid.appendChild(card);
       });
 
       updateLiveCounter();
     }
 
-
-    /*************************************************************************
-     * SECTION 6: ACCURATE BOOK COVER FETCHING (GOOGLE BOOKS FIRST + OPEN LIBRARY)
-     *************************************************************************/
-    async function enrichBooksWithOnlineMetadata() {
-      const cleanTitleForSearch = (rawTitle) =>
-        rawTitle
-          .replace(/\(.*?\)/g, "")
-          .replace(/Shiva Trilogy/i, "The Immortals of Meluha")
-          .replace(/Harry Potter/i, "Harry Potter and the Philosopher's Stone")
-          .trim();
-
-      // Only auto-fetch books that DO NOT have a manual `cover:` set
-      const booksToFetch = BOOKS_DATA.filter(b => !b.cover && (!bookMetaCache[b.id] || !bookMetaCache[b.id].cover));
-
-      const batchSize = 5;
-      for (let i = 0; i < booksToFetch.length; i += batchSize) {
-        const batch = booksToFetch.slice(i, i + batchSize);
-        await Promise.allSettled(batch.map(async (book) => {
-          const queryTitle = cleanTitleForSearch(book.title);
-          const strictQuery = encodeURIComponent(`intitle:"${queryTitle}" inauthor:"${book.author.split("&")[0].trim()}"`);
-
-          try {
-            // 1. Try Google Books API with strict title + author match first
-            const gbRes = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${strictQuery}&maxResults=1`);
-            if (gbRes.ok) {
-              const gbData = await gbRes.json();
-              if (gbData.items && gbData.items.length > 0) {
-                const info = gbData.items[0].volumeInfo || {};
-                let thumb = info.imageLinks ? (info.imageLinks.thumbnail || info.imageLinks.smallThumbnail) : null;
-                if (thumb) {
-                  thumb = thumb.replace(/^http:\/\//i, "https://").replace("&edge=curl", "");
-                  bookMetaCache[book.id] = {
-                    cover: thumb,
-                    genre: book.genre || (info.categories && info.categories[0]) || "Featured Read",
-                    synopsis: book.synopsis || (info.description ? info.description.slice(0, 220) + "..." : "")
-                  };
-                  updateCardDOM(book.id, bookMetaCache[book.id]);
-                  return;
-                }
-              }
-            }
-
-            // 2. Fallback to Open Library Search API
-            const olQuery = encodeURIComponent(`${queryTitle} ${book.author}`);
-            const olRes = await fetch(`https://openlibrary.org/search.json?q=${olQuery}&limit=1&fields=cover_i`);
-            if (olRes.ok) {
-              const olData = await olRes.json();
-              if (olData.docs && olData.docs.length > 0 && olData.docs[0].cover_i) {
-                const coverUrl = `https://covers.openlibrary.org/b/id/${olData.docs[0].cover_i}-M.jpg`;
-                bookMetaCache[book.id] = {
-                  cover: coverUrl,
-                  genre: book.genre,
-                  synopsis: book.synopsis
-                };
-                updateCardDOM(book.id, bookMetaCache[book.id]);
-              }
-            }
-          } catch (err) {}
-        }));
-
-        try {
-          localStorage.setItem(API_CACHE_KEY, JSON.stringify(bookMetaCache));
-        } catch (e) {}
-      }
-    }
-
-    function updateCardDOM(bookId, meta) {
-      if (!meta) return;
-      const imgEl = document.getElementById(`cover-${bookId}`);
-      if (imgEl && meta.cover) {
-        imgEl.src = meta.cover;
-      }
-    }
-     /* SECTION 7: GOOGLE SHEETS LIVE STOCK SYNC & ORDER SUBMISSION
-     *************************************************************************/
     async function syncInventoryFromGoogleSheet() {
-      // Load any locally placed orders first so the student sees instant updates
       const counts = {};
       try {
         const localOrders = JSON.parse(localStorage.getItem(LOCAL_ORDERS_KEY) || "[]");
-        localOrders.forEach(o => {
-          counts[o.bookId] = (counts[o.bookId] || 0) + 1;
-        });
+        localOrders.forEach(o => { counts[o.bookId] = (counts[o.bookId] || 0) + 1; });
       } catch (e) {}
 
       if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes("PASTE_YOUR")) {
@@ -1709,21 +1382,20 @@
         if (res.ok) {
           const data = await res.json();
           if (data && data.orderCounts) {
-            orderCountsByBookId = data.orderCounts;
+            // Combine Google Sheet orders with local storage orders
+            Object.keys(data.orderCounts).forEach(id => {
+              counts[id] = Math.max(counts[id] || 0, data.orderCounts[id]);
+            });
+            orderCountsByBookId = counts;
             renderBookCatalog();
           }
         }
       } catch (err) {
-        console.warn("Using cached inventory status:", err);
         orderCountsByBookId = counts;
         renderBookCatalog();
       }
     }
 
-
-    /*************************************************************************
-     * SECTION 8: EVENT LISTENERS (MODAL, FORM SUBMIT, SYNOPSIS TOGGLE)
-     *************************************************************************/
     const orderModal = document.getElementById("orderModal");
     const modalFormView = document.getElementById("modalFormView");
     const modalConfirmView = document.getElementById("modalConfirmView");
@@ -1736,11 +1408,11 @@
       const mrp = calculateStruckThroughMRP(book.price, book.mrp);
       const cached = bookMetaCache[book.id] || {};
       const coverSrc = book.cover || cached.cover || getStylizedCoverSVG(book.title, book.author);
+
       document.getElementById("selectedBookId").value = book.id;
       document.getElementById("modalBookCover").src = coverSrc;
       document.getElementById("modalBookTitle").textContent = book.title;
       document.getElementById("modalBookAuthor").textContent = `by ${book.author}`;
-      document.getElementById("modalBookMrp").textContent = `₹${mrp}`;
       document.getElementById("modalBookPrice").textContent = `₹${book.price}`;
 
       modalFormView.style.display = "block";
@@ -1748,11 +1420,6 @@
       orderModal.classList.add("open");
     }
 
-    function closePreOrderModal() {
-      orderModal.classList.remove("open");
-    }
-
-    // Delegate clicks on Book Grid (Pre-order button & Info button)
     document.getElementById("bookGrid").addEventListener("click", (e) => {
       const toggleBtn = e.target.closest("[data-toggle-info]");
       if (toggleBtn) {
@@ -1764,24 +1431,17 @@
         }
         return;
       }
-
       const preorderBtn = e.target.closest("[data-preorder-id]");
       if (preorderBtn) {
-        const bookId = preorderBtn.getAttribute("data-preorder-id");
-        openPreOrderModal(bookId);
+        openPreOrderModal(preorderBtn.getAttribute("data-preorder-id"));
       }
     });
 
-    document.getElementById("closeModalBtn").addEventListener("click", closePreOrderModal);
-    document.getElementById("doneConfirmBtn").addEventListener("click", closePreOrderModal);
-    orderModal.addEventListener("click", (e) => {
-      if (e.target === orderModal) closePreOrderModal();
-    });
+    document.getElementById("closeModalBtn").addEventListener("click", () => orderModal.classList.remove("open"));
+    document.getElementById("doneConfirmBtn").addEventListener("click", () => orderModal.classList.remove("open"));
 
-    // Handle Form Submission
     preOrderForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const bookId = document.getElementById("selectedBookId").value;
       const book = BOOKS_DATA.find(b => b.id === bookId);
       if (!book) return;
@@ -1810,7 +1470,6 @@
         departmentYear: dept
       };
 
-      // Send to Google Sheets Web App if configured
       if (GOOGLE_SCRIPT_URL && !GOOGLE_SCRIPT_URL.includes("PASTE_YOUR")) {
         try {
           await fetch(GOOGLE_SCRIPT_URL, {
@@ -1819,33 +1478,19 @@
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
           });
-        } catch (err) {
-          console.warn("Google Sheet submission fallback:", err);
-        }
+        } catch (err) {}
       }
 
-      // Immediately update live count & LocalStorage memory
       orderCountsByBookId[book.id] = (orderCountsByBookId[book.id] || 0) + 1;
-
       try {
         const existing = JSON.parse(localStorage.getItem(LOCAL_ORDERS_KEY) || "[]");
-        existing.push({
-          bookId: book.id,
-          title: book.title,
-          price: book.price,
-          name: name,
-          whatsapp: whatsapp,
-          dept: dept,
-          time: payload.timestamp
-        });
+        existing.push({ bookId: book.id, title: book.title, price: book.price, name: name, dept: dept });
         localStorage.setItem(LOCAL_ORDERS_KEY, JSON.stringify(existing));
       } catch (err) {}
 
-      // Re-render catalog and top memory bar
       renderBookCatalog();
       renderMyPreOrdersBanner();
 
-      // Prepare Confirmation Screen & Instant WhatsApp Link
       document.getElementById("confirmUserName").textContent = name;
       document.getElementById("confirmBookTitle").textContent = `${book.title} (₹${book.price})`;
 
@@ -1860,25 +1505,17 @@
       modalConfirmView.style.display = "block";
     });
 
-    // Back to top button visibility
     const backToTopBtn = document.getElementById("backToTopBtn");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add("visible");
-      } else {
-        backToTopBtn.classList.remove("visible");
-      }
+      if (window.scrollY > 400) backToTopBtn.classList.add("visible");
+      else backToTopBtn.classList.remove("visible");
     });
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Initialize Page
     document.addEventListener("DOMContentLoaded", () => {
       renderBookCatalog();
       renderMyPreOrdersBanner();
       syncInventoryFromGoogleSheet();
-      enrichBooksWithOnlineMetadata();
     });
   </script>
 </body>
